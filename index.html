@@ -69,38 +69,6 @@
   .narrow{max-width:var(--narrow);margin:0 auto;}
   section{padding:96px 0;position:relative;}
 
-  /* ---------- flow connector: animated line between sections ---------- */
-  .flow-connector{
-    width:2px;height:64px;margin:16px auto;
-    background:#E2DACB;
-    border-radius:1px;
-    position:relative;
-  }
-  .flow-connector::after{
-    content:"";
-    position:absolute;left:50%;top:0;
-    width:7px;height:7px;border-radius:50%;
-    background:#E8603C;
-    transform:translate(-50%,0);
-    animation:flow-dot 3s ease-in-out infinite;
-  }
-  .flow-connector.flow-connector-alt::after{
-    animation-delay:1.5s;
-  }
-  @keyframes flow-dot{
-    0%   {transform:translate(-50%,0);opacity:0;}
-    15%  {opacity:1;}
-    85%  {opacity:1;}
-    100% {transform:translate(-50%,57px);opacity:0;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .flow-connector::after{
-      animation:none;
-      transform:translate(-50%,57px);
-      opacity:1;
-    }
-  }
-
   /* ---------- buttons ---------- */
   .btn{
     display:inline-block;
@@ -616,8 +584,6 @@
   </div>
 </header>
 
-<div class="flow-connector" aria-hidden="true"></div>
-
 <!-- ============ 2. WHAT DO YOU GET ============ -->
 <section class="wyg">
   <div class="wrap">
@@ -680,8 +646,6 @@
     </div>
   </div>
 </section>
-
-<div class="flow-connector flow-connector-alt" aria-hidden="true"></div>
 
 <!-- ============ 3. YOUTUBE ============ -->
 <section class="yt">
