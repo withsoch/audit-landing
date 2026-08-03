@@ -274,7 +274,7 @@
   .yt h2{color:var(--cream);font-size:clamp(30px,4vw,44px);font-weight:800;text-align:center;margin-bottom:14px;}
   .yt h2 .mark{color:var(--coral);}
   .yt-sub{color:#CFC7B4;text-align:center;max-width:560px;margin:0 auto 52px;font-size:17.5px;}
-  .yt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .yt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
   .yt-card{
     background:#3A3632;
     border-radius:12px;overflow:hidden;
@@ -299,6 +299,23 @@
   .yt-card span{
     font-family:'IBM Plex Mono',monospace;
     font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:#A79E8D;
+  }
+  .case-study-card{
+    background:#3A3632;
+    border-radius:12px;overflow:hidden;
+    border:1.5px solid #57524C;
+  }
+  .case-study-card .video-container{aspect-ratio:16/9;background:#57524C;}
+  .case-study-card wistia-player{display:block;width:100%;height:100%;}
+  .case-study-card h3{
+    font-family:'Bricolage Grotesque',sans-serif;
+    color:var(--cream);font-size:16.5px;font-weight:700;line-height:1.35;
+    margin:18px 20px 6px;
+  }
+  .case-study-card p{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:#A79E8D;
+    margin:0 20px 20px;
   }
 
   /* ---------- comparison ---------- */
@@ -654,27 +671,46 @@
     <h2>Watch How We've Helped Businesses Like Yours</h2>
     <p class="yt-sub">Real client builds, recorded start to finish. Watch a few before you book, so the call starts three steps ahead.</p>
     <div class="yt-grid">
-      <a class="yt-card" href="#" aria-label="Watch video: How We Automated 20 Hours of Weekly Research">
-        <div class="yt-thumb"><div class="yp"><svg width="18" height="20" viewBox="0 0 30 34" fill="none"><path d="M28 15.27C29.33 16.04 29.33 17.96 28 18.73L3 33.16C1.67 33.93 0 32.97 0 31.43V2.57C0 1.03 1.67 0.07 3 0.84L28 15.27Z" fill="#fff"/></svg></div></div>
-        <div class="yt-meta">
-          <h4>How We Automated 20+ Hours of Weekly Research for a Data Firm</h4>
-          <span>Build breakdown</span>
+      <div class="case-study-card">
+        <div class="video-container">
+          <script src="https://fast.wistia.com/player.js" async></script>
+          <script src="https://fast.wistia.com/embed/3xx09c24mu.js" async type="module"></script>
+          <style>wistia-player[media-id='3xx09c24mu']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/3xx09c24mu/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+          <wistia-player media-id="3xx09c24mu" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         </div>
-      </a>
-      <a class="yt-card" href="#" aria-label="Watch video: The n8n Stack We Deploy for Every Client">
-        <div class="yt-thumb"><div class="yp"><svg width="18" height="20" viewBox="0 0 30 34" fill="none"><path d="M28 15.27C29.33 16.04 29.33 17.96 28 18.73L3 33.16C1.67 33.93 0 32.97 0 31.43V2.57C0 1.03 1.67 0.07 3 0.84L28 15.27Z" fill="#fff"/></svg></div></div>
-        <div class="yt-meta">
-          <h4>The n8n Stack We Deploy for Every Client, Explained</h4>
-          <span>System walkthrough</span>
+        <h3>13x More Google Reviews for a Physical Therapy Practice</h3>
+        <p>Physical Therapy First &middot; 12 months</p>
+      </div>
+      <div class="case-study-card">
+        <div class="video-container">
+          <script src="https://fast.wistia.com/player.js" async></script>
+          <script src="https://fast.wistia.com/embed/tq5s4jk1ws.js" async type="module"></script>
+          <style>wistia-player[media-id='tq5s4jk1ws']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/tq5s4jk1ws/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+          <wistia-player media-id="tq5s4jk1ws" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         </div>
-      </a>
-      <a class="yt-card" href="#" aria-label="Watch video: What To Automate First">
-        <div class="yt-thumb"><div class="yp"><svg width="18" height="20" viewBox="0 0 30 34" fill="none"><path d="M28 15.27C29.33 16.04 29.33 17.96 28 18.73L3 33.16C1.67 33.93 0 32.97 0 31.43V2.57C0 1.03 1.67 0.07 3 0.84L28 15.27Z" fill="#fff"/></svg></div></div>
-        <div class="yt-meta">
-          <h4>What To Automate First When You Have 10 Employees</h4>
-          <span>Owner's guide</span>
+        <h3>8-Minute Guest Response Time for a Hospitality Brand</h3>
+        <p>Be London &middot; 12 months</p>
+      </div>
+      <div class="case-study-card">
+        <div class="video-container">
+          <script src="https://fast.wistia.com/player.js" async></script>
+          <script src="https://fast.wistia.com/embed/2sj7tu442g.js" async type="module"></script>
+          <style>wistia-player[media-id='2sj7tu442g']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2sj7tu442g/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+          <wistia-player media-id="2sj7tu442g" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         </div>
-      </a>
+        <h3>86% Package Completion Rate for an Aesthetics Clinic</h3>
+        <p>Aesthetics Lab &middot; 12 months</p>
+      </div>
+      <div class="case-study-card">
+        <div class="video-container">
+          <script src="https://fast.wistia.com/player.js" async></script>
+          <script src="https://fast.wistia.com/embed/31w1nadc8c.js" async type="module"></script>
+          <style>wistia-player[media-id='31w1nadc8c']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/31w1nadc8c/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+          <wistia-player media-id="31w1nadc8c" aspect="1.7777777777777777" data-branding="false"></wistia-player>
+        </div>
+        <h3>$80K in New Event Revenue for a Hotel</h3>
+        <p>The Fifth Avenue Hotel &middot; Year 1</p>
+      </div>
     </div>
   </div>
 </section>
@@ -804,40 +840,24 @@
 
     <div class="results">
       <div class="result-card">
-        <script src="https://fast.wistia.com/player.js" async></script>
-        <script src="https://fast.wistia.com/embed/3xx09c24mu.js" async type="module"></script>
-        <style>wistia-player[media-id='3xx09c24mu']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/3xx09c24mu/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
-        <wistia-player media-id="3xx09c24mu" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         <div class="big">13x</div>
         <h4>Jump in monthly Google reviews</h4>
         <p>Automatic review requests go out only to patients who reported a strong outcome, timed right after their visit instead of blasted to everyone.</p>
         <span class="co">Physical Therapy First &middot; 12 months</span>
       </div>
       <div class="result-card">
-        <script src="https://fast.wistia.com/player.js" async></script>
-        <script src="https://fast.wistia.com/embed/tq5s4jk1ws.js" async type="module"></script>
-        <style>wistia-player[media-id='tq5s4jk1ws']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/tq5s4jk1ws/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
-        <wistia-player media-id="tq5s4jk1ws" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         <div class="big">8 min</div>
         <h4>Average guest response time</h4>
         <p>Every enquiry, on any channel, gets matched to live availability and answered with real options, any hour of the day.</p>
         <span class="co">Be London &middot; 12 months</span>
       </div>
       <div class="result-card">
-        <script src="https://fast.wistia.com/player.js" async></script>
-        <script src="https://fast.wistia.com/embed/2sj7tu442g.js" async type="module"></script>
-        <style>wistia-player[media-id='2sj7tu442g']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2sj7tu442g/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
-        <wistia-player media-id="2sj7tu442g" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         <div class="big">86%</div>
         <h4>Multi-session package completion</h4>
         <p>Automatic rebooking reminders keep treatment series like laser packages on track, no front-desk phone calls needed.</p>
         <span class="co">Aesthetics Lab &middot; 12 months</span>
       </div>
       <div class="result-card">
-        <script src="https://fast.wistia.com/player.js" async></script>
-        <script src="https://fast.wistia.com/embed/31w1nadc8c.js" async type="module"></script>
-        <style>wistia-player[media-id='31w1nadc8c']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/31w1nadc8c/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
-        <wistia-player media-id="31w1nadc8c" aspect="1.7777777777777777" data-branding="false"></wistia-player>
         <div class="big">$80K</div>
         <h4>New event revenue booked</h4>
         <p>Branded, priced proposals now go out within the hour instead of four days later, while the inquiry is still hot.</p>
