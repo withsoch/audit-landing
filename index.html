@@ -130,7 +130,7 @@
   .nav-cta:hover{background:var(--ink);}
 
   /* ---------- hero ---------- */
-  .hero{padding:80px 0 72px;text-align:center;}
+  .hero{padding:80px 0 25px;text-align:center;}
   .hero-pill{
     display:inline-block;
     font-family:'IBM Plex Mono',monospace;
@@ -181,6 +181,7 @@
   }
 
   /* ---------- what you get ---------- */
+  .wyg{padding-top:20px;}
   .wyg h2{font-size:clamp(30px,4vw,44px);font-weight:800;margin-bottom:18px;text-align:center;}
   .wyg-lede{
     text-align:center;font-size:20px;color:var(--ink);font-weight:500;
@@ -306,6 +307,13 @@
     border:1.5px solid #57524C;
     width:100%;
     height:auto;
+    scroll-margin-top:88px;
+    transition:border-color .2s ease,background-color .2s ease,box-shadow .2s ease;
+  }
+  .case-study-card:target{
+    border:2px solid #EA6A47;
+    background-color:rgba(234,106,71,0.1);
+    box-shadow:0 0 15px rgba(234,106,71,0.3);
   }
   .case-study-card .video-container{aspect-ratio:16/9;background:#57524C;width:100%;}
   .case-study-card wistia-player{display:block;width:100%;height:auto;}
@@ -497,6 +505,11 @@
     color:var(--ink);background:#FFF;
     border:1.5px solid var(--line);
     padding:8px 16px;border-radius:100px;
+    display:inline-block;text-decoration:none;
+    cursor:pointer;transition:border-color .15s ease,background .15s ease;
+  }
+  .logo-strip a.ls-chip:hover{
+    border-color:var(--ink);background:#FAFAFA;
   }
 
   /* ---------- faq ---------- */
@@ -674,7 +687,7 @@
     <h2>Watch How We've Helped Businesses Like Yours</h2>
     <p class="yt-sub">Real client builds, recorded start to finish. Watch a few before you book, so the call starts three steps ahead.</p>
     <div class="yt-grid">
-      <div class="case-study-card">
+      <div class="case-study-card" id="physical-therapy-first">
         <div class="video-container">
           <script src="https://fast.wistia.com/player.js" async></script>
           <script src="https://fast.wistia.com/embed/3xx09c24mu.js" async type="module"></script>
@@ -684,7 +697,7 @@
         <h3>13x More Google Reviews for a Physical Therapy Practice</h3>
         <p>Physical Therapy First &middot; 12 months</p>
       </div>
-      <div class="case-study-card">
+      <div class="case-study-card" id="be-london">
         <div class="video-container">
           <script src="https://fast.wistia.com/player.js" async></script>
           <script src="https://fast.wistia.com/embed/tq5s4jk1ws.js" async type="module"></script>
@@ -694,7 +707,7 @@
         <h3>8-Minute Guest Response Time for a Hospitality Brand</h3>
         <p>Be London &middot; 12 months</p>
       </div>
-      <div class="case-study-card">
+      <div class="case-study-card" id="aesthetics-lab">
         <div class="video-container">
           <script src="https://fast.wistia.com/player.js" async></script>
           <script src="https://fast.wistia.com/embed/2sj7tu442g.js" async type="module"></script>
@@ -704,7 +717,7 @@
         <h3>86% Package Completion Rate for an Aesthetics Clinic</h3>
         <p>Aesthetics Lab &middot; 12 months</p>
       </div>
-      <div class="case-study-card">
+      <div class="case-study-card" id="fifth-avenue-hotel">
         <div class="video-container">
           <script src="https://fast.wistia.com/player.js" async></script>
           <script src="https://fast.wistia.com/embed/31w1nadc8c.js" async type="module"></script>
@@ -871,10 +884,10 @@
     <div class="logo-strip">
       <div class="ls-label">Recent engagements</div>
       <div class="ls-row">
-        <span class="ls-chip">Physical Therapy First</span>
-        <span class="ls-chip">Be London</span>
-        <span class="ls-chip">Aesthetics Lab</span>
-        <span class="ls-chip">The Fifth Avenue Hotel</span>
+        <a href="#physical-therapy-first" class="ls-chip">Physical Therapy First</a>
+        <a href="#be-london" class="ls-chip">Be London</a>
+        <a href="#aesthetics-lab" class="ls-chip">Aesthetics Lab</a>
+        <a href="#fifth-avenue-hotel" class="ls-chip">The Fifth Avenue Hotel</a>
       </div>
     </div>
 
